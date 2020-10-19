@@ -19,8 +19,8 @@
   <div id="mainPage" class="container page-container">
     <!-- tab buttons for switching between buying and selling pages -->
     <div id="tabButtons">
-      <button type="button" class="btn tabButton">Buying</button>
-      <button type="button" class="btn tabButton">Selling</button>
+      <button type="button" class="btn tabButton" onclick="switchToBuyingTab()">Buying</button>
+      <button type="button" class="btn tabButton" onclick="switchToSellingTab()">Selling</button>
     </div>
 
     <!-- buying section which contains search, category dropdown, and listings -->
@@ -46,8 +46,8 @@
   </div>
 
   <!-- selling section which contains all the listings for the current user -->
-  <div id="selling">
-    <button id="createListing" type="button" class="btn">What are you selling?</button>
+  <div id="selling" style="display: none;">
+    <button id="createListing" type="button" class="btn tabButton">What are you selling?</button>
     <!-- area for putting all the user's listings -->
     <div id="userListing"></div>
   </div>

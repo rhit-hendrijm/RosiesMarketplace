@@ -1,36 +1,21 @@
-/**
- * @fileoverview
- * Provides the JavaScript interactions for all pages.
- *
- * @author 
- * PUT_YOUR_NAME_HERE
- */
-
-/** namespace. */
 var rhit = rhit || {};
 
-/** globals */
-rhit.variableName = "";
-
-/** function and class syntax examples */
-rhit.functionName = function () {
-	/** function body */
+function switchToBuyingTab() {
+	var buying = document.getElementById("buying");
+	var selling = document.getElementById("selling");
+	buying.style.display = "block";
+	selling.style.display = "none";
 };
 
-rhit.ClassName = class {
-	constructor() {
+function switchToSellingTab() {
+	var buying = document.getElementById("buying");
+	var selling = document.getElementById("selling");
+	selling.style.display = "block";
+	buying.style.display = "none";
+};
 
-	}
-
-	methodName() {
-
-	}
-}
-
-/* Main */
-/** function and class syntax examples */
 rhit.main = function () {
 	console.log("Ready");
-};
+}
 
 rhit.main();
