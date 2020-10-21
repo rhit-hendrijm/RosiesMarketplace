@@ -1,5 +1,40 @@
+
 body {
     background: #DDDDDD;
+}
+
+.btn-group.btnGroupFullWidth {
+    display: flex;
+}
+
+.btnGroupFullWidth .btn {
+    flex: 1;
+}
+
+#categoryDropdown {
+    float: left;
+    width: 12%;
+    margin-left: 15px;
+    background-color: white;
+    color: #800000;
+    padding-top: 7px;
+}
+
+#createListing {
+    background: white;
+    color: #800000;
+    width: 100%
+}
+
+#listing {
+    column-count: 3;
+    column-gap: 5px;
+}
+
+.listingStatus {
+    color: gray;
+    font-size: 1em;
+    padding-top: 15px;
 }
 
 .navbar {
@@ -7,21 +42,72 @@ body {
     color: white;
 }
 
+.navButton {
+    float: right;
+}
+
 .page-container {
     margin-top: 75px;
 }
 
-#categoryDropdown {
-    background: white;
-    color: black;
+.buyingListing {
+    display: inline-block;
+    box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
+    margin: 0 2px 15px;
+    padding: 10px;
+    padding-bottom: 5px;
+    background: linear-gradient(45deg, #FFF, #EEE);
+    transition: all .2s ease;
+}
+
+.buyingListing img {
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 8px;
+    margin-bottom: 3px;
+}
+
+.buyingListing p {
+    font: 12px/18px Arial, sans-serif;
+    text-align: center;
+    color: #333;
+    margin: 0;
+    max-height: 18px;
+    overflow: hidden;
+}
+
+#profileButton {
+    border-radius: 50%;
+}
+
+#searchBar {
+    float: left;
+    width: 80%;
+}
+
+.sellingListing {
+    background-color: white;
+    display: flex;
+    height: 100px;
+}
+
+.sellingManageListing {
+    margin-left: auto;
+    margin-top: 51px;
+    padding-right: 20px;
+    color: #800000;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.sellingNameAndPrice {
+    padding-left: 20px;
+    padding-top: 10px;
+    color: #800000;
 }
 
 .tabButton {
     background: white;
     color: #800000;
-}
-
-#tabButtons {
-    display: flex;
-    justify-content: space-around;
+    border: 1px solid gray;
 }
