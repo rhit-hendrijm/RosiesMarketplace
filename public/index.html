@@ -11,89 +11,73 @@
 </head>
 
 <body>
-    <<<<<<< HEAD <nav class="navbar navbar-dark fixed-top">
+    <nav class="navbar navbar-dark fixed-top">
         <a class="navbar-brand" href="#">Rosie's Marketplace</a>
         <button id="chatButton" type="button" class="btn">Chat</button>
         <button id="profileButton" type="button" class="btn">Profile</button>
-        </nav>
-        <div id="mainPage" class="container page-container">
-            <!-- tab buttons for switching between buying and selling pages -->
-            <div id="tabButtons">
-                <button type="button" class="btn tabButton">Buying</button>
-                <!--href="/buyingpage.html"-->
-                <button type="button" class="btn tabButton">Selling</button>
-            </div>
-            =======
-            <nav class="navbar navbar-dark fixed-top">
-                <a class="navbar-brand" href="#">Rosie's Marketplace</a>
-                <button id="chatButton" type="button" class="btn">Chat</button>
-                <button id="profileButton" type="button" class="btn">Profile</button>
-            </nav>
-            <div id="mainPage" class="container page-container">
-                <!-- tab buttons for switching between buying and selling pages -->
-                <div id="tabButtons">
-                    <button type="button" class="btn tabButton">Buying</button>
-                    <!--href="/buyingpage.html"-->
-                    <button type="button" class="btn tabButton">Selling</button>
-                </div>
-                >>>>>>> b3d7e8f7ea01e72ad368d9a7a19969a811052b78
-
-                <!-- buying section which contains search, category dropdown, and listings -->
-                <div id="buying">
-                    <!-- search bar and category dropdown -->
-                    <div id="search" class="mx-auto">
-                        <input class="form-control" type="text" placeholder="Search">
-                        <div class="dropdown show">
-                            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="categoryDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Category
-          </a>
-
-                            <div class="dropdown-menu" aria-labelledby="categoryDropdown">
-                                <a class="dropdown-item" href="#">Textbooks</a>
-                                <a class="dropdown-item" href="#">Electronics</a>
-                                <a class="dropdown-item" href="#">Hardware(lofts etc.)</a>
-                                <a class="dropdown-item" href="#">Something else here</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <<<<<<< HEAD <!-- area for putting all the listing -->
-                        <div id="listings"></div>
-                </div>
-
-                <!-- selling section which contains all the listings for the current user -->
-                <div id="selling">
-                    <button id="createListing" type="button" class="btn">What are you selling?</button>
-                    <!-- area for putting all the user's listings -->
-                    <div id="userListing"></div>
-                </div>
-                =======
-                <!-- area for putting all the listing -->
-                <div id="listings"></div>
-            </div>
-
-            <!-- selling section which contains all the listings for the current user -->
-            <div id="selling">
-                <button id="createListing" type="button" class="btn">What are you selling?</button>
-                <!-- area for putting all the user's listings -->
-                <div id="userListing"></div>
-            </div>
-            >>>>>>> b3d7e8f7ea01e72ad368d9a7a19969a811052b78
-
-
+    </nav>
+    <div id="mainPage" class="container page-container">
+        <!-- tab buttons for switching between buying and selling pages -->
+        <div id="tabButtons">
+            <button type="button" class="btn tabButton">Buying</button>
+            <!--href="/buyingpage.html"-->
+            <button type="button" class="btn tabButton">Selling</button>
         </div>
-        <script src="scripts/jquery.min.js"></script>
-        <script src="scripts/popper.js"></script>
-        <script src="scripts/bootstrap-material-design.js"></script>
-        <script>
-            $("body").bootstrapMaterialDesign();
-        </script>
-        <script src="/__/firebase/7.18.0/firebase-app.js"></script>
-        <script src="/__/firebase/7.18.0/firebase-analytics.js"></script>
-        <script src="/__/firebase/7.18.0/firebase-auth.js"></script>
-        <script src="/__/firebase/7.18.0/firebase-firestore.js"></script>
-        <script src="/__/firebase/init.js"></script>
-        <script src="scripts/main.js"></script>
+        =======
+        <nav class="navbar navbar-dark fixed-top">
+            <a class="navbar-brand" href="#">Rosie's Marketplace</a>
+            <button id="chatButton" type="button" class="btn">Chat</button>
+            <button id="profileButton" type="button" class="btn">Profile</button>
+        </nav>
+
+        <!-- buying section which contains search, category dropdown, and listings -->
+        <div id="buying">
+            <!-- search bar and category dropdown -->
+            <div id="search" class="mx-auto">
+                <input class="form-control" type="text" placeholder="Search">
+                <div class="dropdown show">
+                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="categoryDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Category
+                            </a>
+
+                    <div class="dropdown-menu" aria-labelledby="categoryDropdown">
+                        <a class="dropdown-item" href="#">Textbooks</a>
+                        <a class="dropdown-item" href="#">Electronics</a>
+                        <a class="dropdown-item" href="#">Hardware(lofts etc.)</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- area for putting all the listing -->
+            <div id="listings"></div>
+        </div>
+
+        <!-- selling section which contains all the listings for the current user -->
+        <div id="selling">
+            <button id="createListing" type="button" class="btn">What are you selling?</button>
+            <!-- area for putting all the user's listings -->
+            <div id="userListing"></div>
+        </div>
+        =======
+        <!-- area for putting all the listing -->
+        <div id="listings"></div>
+    </div>
+
+
+    </div>
+    <script src="scripts/jquery.min.js"></script>
+    <script src="scripts/popper.js"></script>
+    <script src="scripts/bootstrap-material-design.js"></script>
+    <script>
+        $("body").bootstrapMaterialDesign();
+    </script>
+    <script src="/__/firebase/7.18.0/firebase-app.js"></script>
+    <script src="/__/firebase/7.18.0/firebase-analytics.js"></script>
+    <script src="/__/firebase/7.18.0/firebase-auth.js"></script>
+    <script src="/__/firebase/7.18.0/firebase-firestore.js"></script>
+    <script src="/__/firebase/init.js"></script>
+    <script src="scripts/main.js"></script>
 </body>
 
 </html>
