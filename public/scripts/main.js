@@ -14,6 +14,14 @@ function switchToSellingTab() {
 	buying.style.display = "none";
 };
 
+function goToProfile() {
+	window.location.href = "/profile.html";
+};
+
+function goToChat() {
+	window.location.href = "/chat.html";
+};
+
 rhit.main = function () {
 	console.log("Ready");
 }
