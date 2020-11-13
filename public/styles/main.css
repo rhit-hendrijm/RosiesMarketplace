@@ -10,13 +10,8 @@ body {
     flex: 1;
 }
 
-#categoryDropdown {
-    float: left;
-    width: 12%;
-    margin-left: 15px;
-    background-color: white;
-    color: #800000;
-    padding-top: 7px;
+.chat {
+    margin: 15px;
 }
 
 .chatSection {
@@ -27,6 +22,16 @@ body {
     background: white;
     color: #800000;
     width: 100%
+}
+
+.editButton {
+    display: block;
+    margin: 20px auto;
+    color: white;
+    background: #800000;
+    font-size: 1.1em;
+    padding: 10px 30px;
+    border-radius: 5px;
 }
 
 #listing {
@@ -53,6 +58,11 @@ body {
     margin-top: 75px;
 }
 
+#profilePicture {
+    height: 100px;
+    width: 100px;
+}
+
 .buyingListing {
     display: inline-block;
     box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
@@ -61,6 +71,7 @@ body {
     padding-bottom: 5px;
     background: linear-gradient(45deg, #FFF, #EEE);
     transition: all .2s ease;
+    width:500px;
 }
 
 .buyingListing img {
@@ -68,11 +79,11 @@ body {
     border-bottom: 1px solid #ccc;
     padding-bottom: 8px;
     margin-bottom: 3px;
+    height: 250px;
 }
 
 .buyingListing p {
     font: 12px/18px Arial, sans-serif;
-    text-align: center;
     color: #333;
     margin: 0;
     max-height: 18px;
@@ -83,15 +94,32 @@ body {
     border-radius: 50%;
 }
 
+#roseLogo {
+    max-width: 350px;
+    margin: 20px auto;
+    display: block;
+}
+
+#rosefireButton {
+    display: block;
+    margin: 60px auto;
+    color: white;
+    background: #800000;
+    font-size: 1.1em;
+    padding: 10px 30px;
+    border-radius: 5px;
+}
+
 #searchBar {
     float: left;
-    width: 80%;
+    margin-bottom: 15px;
 }
 
 .sellingListing {
     background-color: white;
     display: flex;
     height: 100px;
+    margin: 15px 0px;
 }
 
 .sellingManageListing {

@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+  <link rel="stylesheet" href="styles/bootstrap-material-design.min.css">
+  <link rel="stylesheet" href="styles/main.css">
+  <title>Rosie's Marketplace</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-dark fixed-top">
+    <a class="navbar-brand" href="/">Rosie's Marketplace</a>
+    <div style="float: right;">
+      <button id="signOutButton" type="button" style="color:white" class="btn navButton">Sign Out</button>
+      <button id="profileButton" type="button" style="color:white" class="btn navButton">Profile</button>
+    </div>
+  </nav>
+  <div id="detailPage" class="container page-container">
+    <div class="card mx-auto" style="max-width: 1024px;">
+      <img id="cardImageURL" class="card-img-top img-fluid" style="max-width:1024px;max-height:512px" src="src">
+      <div class="card-body">
+        <h4 id="cardCaption" class="cardText"></h4>
+      </div>
+    </div>
+    <br>
+    <br>
+    <div>
+      <h6>Send seller a message</h6>
+      <input id="messageInput" type="text" class="form-control" placeholder="Is this still available?" aria-label="Recipient's username" aria-describedby="basic-addon2">
+      <button id="sendMessage" class="btn col-12 editButton" type="button">Send</button>
+    </div>
+    <br>
+    <div style="text-align: center;">
+      <h3>Messages to Seller</h3>
+      <div id="chats">
+      </div>
+    </div>
+    <br>
+    <br>
+  </div>
+
+<!-- Modals -->
+<div class="modal fade" id="editPhotoDialog" tabindex="-1" role="dialog" aria-labelledby="Edit photo dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Edit this image's caption</h5>
+      </div>
+      <div class="modal-body">
+
+        <form>
+          <div class="form-group bmd-form-group">
+            <label for="inputCaption" class="bmd-label-floating">Caption</label>
+            <input type="text" class="form-control" id="inputCaption" placeholder="">
+          </div>
+        </form>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">CANCEL</button>
+        <button id ="submitEditPhoto" type="button" class="btn btn-primary" data-dismiss="modal">SAVE</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="deletePhotoDialog" tabindex="-1" role="dialog" aria-labelledby="Delete photo dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Delete this photo</h5>
+      </div>
+      <div class="modal-body">
+        Are you sure you want to delete this photo?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">CANCEL</button>
+        <button id ="submitDeletePhoto" type="button" class="btn btn-primary" data-dismiss="modal">DELETE</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <script src="scripts/jquery.min.js"></script>
+  <script src="scripts/popper.js"></script>
+  <script src="scripts/bootstrap-material-design.js"></script>
+  <script>$("body").bootstrapMaterialDesign();</script>
+  <script src="/__/firebase/7.18.0/firebase-app.js"></script>
+  <script src="/__/firebase/7.18.0/firebase-analytics.js"></script>
+  <script src="/__/firebase/7.18.0/firebase-auth.js"></script>
+  <script src="/__/firebase/7.18.0/firebase-firestore.js"></script>
+  <script src="/__/firebase/init.js"></script>
+  <script src="scripts/main.js"></script>
+</body>
+
+</html>

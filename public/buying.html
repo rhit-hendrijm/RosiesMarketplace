@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+    <link rel="stylesheet" href="styles/bootstrap-material-design.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <title>Rosie's Marketplace</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-dark fixed-top">
+    <a class="navbar-brand" href="/">Rosie's Marketplace</a>
+    <div style="float: right;">
+        <button id="signOutButton" type="button" style="color:white" class="btn navButton">Sign Out</button>
+        <button id="profileButton" type="button" style="color:white" class="btn navButton">Profile</button>
+    </div>
+  </nav>
+  <div id="buyingPage" class="container page-container">
+    <!-- tab buttons for switching between buying and selling pages -->
+    <div id="tabButtons" class="btn-group btnGroupFullWidth">
+      <button id="buyingTab" type="button" class="btn tabButton">Buying</button>
+      <button id="sellingTab" type="button" class="btn tabButton" >Selling</button>
+    </div>
+
+    <!-- buying section which contains search, category dropdown, and listings -->
+    <div id="buying">
+        <!-- area for putting all the listing -->
+        <div id="listings" style="text-align: center;">
+        </div>
+    </div>
+    <div style="display:flex;float:left">
+        <button id="prevPage" type="button" class="btn editButton">Previous</button>
+        <button id="nextPage" type="button" style="margin-left: 15px;" class="btn editButton">Next</button>
+    </div>
+    <input type="number"style="display:none" id="count" value="0"></input>
+
+<!-- Modal -->
+<div class="modal fade" id="addListing" tabindex="-1" role="dialog" aria-labelledby="Add Listing"
+aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+        <h5 class="modal-title">Create Listing</h5>
+        </div>
+        <div class="modal-body">
+            <div class="form-group">
+                <label for="photo" class="bmd-label-floating">Photo</label>
+                <input type="file" class="form-control-file" id="photo">
+            </div>
+            <div class="form-group bmd-form-group">
+                <label for="whatAreYouSelling" class="bmd-label-floating">What are you selling?</label>
+                <input type="text" class="form-control" id="whatAreYouSelling">
+            </div>
+            <div class="form-group bmd-form-group">
+                <label for="price" class="bmd-label-floating">Price ($)</label>
+                <input type="number" class="form-control" id="price">
+            </div>
+            <div class="form-group bmd-form-group">
+                <label for="category" class="bmd-label-floating">Category</label>
+                <select class="form-control" id="category">
+                  <option></option>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                </select>
+              </div>
+              <div class="form-group bmd-form-group">
+                <label for="description" class="bmd-label-floating">Description</label>
+                <textarea class="form-control" id="description" rows="3"></textarea>
+              </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">CANCEL</button>
+            <button id="submitAddPhoto" type="button" class="btn btn-primary" data-dismiss="modal">CREATE</button>
+        </div>
+    </div>
+    </div>
+</div>
+
+<div class="modal fade" id="testListing" tabindex="-1" role="dialog" aria-labelledby="Add Listing"
+aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+        <h5 class="modal-title">Create Listing</h5>
+        </div>
+        <div class="modal-body">
+            <div class="form-group">
+                <label for="photo" class="bmd-label-floating">Photo</label>
+                <input type="file" class="form-control-file" id="photo">
+            </div>
+            <div class="form-group bmd-form-group">
+                <label for="whatAreYouSelling" class="bmd-label-floating">What are you selling?</label>
+                <input type="text" class="form-control" id="whatAreYouSelling" value="testCaption">
+            </div>
+            <div class="form-group bmd-form-group">
+                <label for="price" class="bmd-label-floating">Price ($)</label>
+                <input type="number" class="form-control" id="price" value="20">
+            </div>
+            <div class="form-group bmd-form-group">
+                <label for="category" class="bmd-label-floating">Category</label>
+                <select class="form-control" id="category" value="test">
+                  <option></option>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                </select>
+              </div>
+              <div class="form-group bmd-form-group">
+                <label for="description" class="bmd-label-floating">Description</label>
+                <textarea class="form-control" id="description" rows="3">test Description</textarea>
+              </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">CANCEL</button>
+            <button id="submitAddPhoto" type="button" class="btn btn-primary" data-dismiss="modal">CREATE</button>
+        </div>
+    </div>
+    </div>
+</div>
+
+<div class="modal fade" id="manageListing" tabindex="-1" role="dialog" aria-labelledby="Add Listing"
+aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+        <h5 class="modal-title">Manage Listing</h5>
+        </div>
+        <div class="modal-body btn-group-vertical">
+            <button id="markAsSold" type="button" class="btn editButton" data-dismiss="modal">Mark as Sold</button>
+            <button id="deleteListing" type="button" class="btn editButton" data-dismiss="modal">Delete Listing</button>
+            <button id="editListing" type="button" data-toggle="modal" data-target="#testListing" class="btn editButton" data-dismiss="modal">Edit Listing</button>
+        </div>
+    </div>
+    </div>
+</div>
+
+
+    <script src="scripts/jquery.min.js"></script>
+    <script src="scripts/popper.js"></script>
+    <script src="scripts/bootstrap-material-design.js"></script>
+    <script>
+        $("body").bootstrapMaterialDesign();
+    </script>
+    <script src="/__/firebase/7.18.0/firebase-app.js"></script>
+    <script src="/__/firebase/7.18.0/firebase-analytics.js"></script>
+    <script src="/__/firebase/7.18.0/firebase-auth.js"></script>
+    <script src="/__/firebase/7.18.0/firebase-firestore.js"></script>
+    <script src="/__/firebase/init.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>

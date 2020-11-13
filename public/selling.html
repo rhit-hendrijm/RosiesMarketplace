@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+    <link rel="stylesheet" href="styles/bootstrap-material-design.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <title>Rosie's Marketplace</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-dark fixed-top">
+        <a class="navbar-brand" href="/">Rosie's Marketplace</a>
+        <div style="float: right;">
+            <button id="signOutButton" type="button" style="color:white" class="btn navButton">Sign Out</button>
+        <button id="profileButton" type="button" style="color:white" class="btn navButton">Profile</button>
+        </div>
+      </nav>
+  <div id="sellingPage" class="container page-container">
+    <!-- tab buttons for switching between buying and selling pages -->
+    <div id="tabButtons" class="btn-group btnGroupFullWidth">
+      <button id="buyingTab" type="button" class="btn tabButton">Buying</button>
+      <button id="sellingTab" type="button" class="btn tabButton" >Selling</button>
+    </div>
+        <!-- selling section which contains all the listings for the current user -->
+        <div id="selling">
+            <button id="createListing" type="button" data-toggle="modal" data-target="#addListing" class="btn">What are you selling?</button>
+            <!-- area for putting all the user's listings -->
+            <div id="activeListings">
+            </div>
+        </div>
+
+    </div>
+
+<!-- Modal -->
+<div class="modal fade" id="addListing" tabindex="-1" role="dialog" aria-labelledby="Add Listing"
+aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+        <h5 class="modal-title">Create Listing</h5>
+        </div>
+        <div class="modal-body">
+            <div class="form-group bmd-form-group">
+                <label for="name" class="bmd-label-floating">What are you selling?</label>
+                <input type="text" class="form-control" id="name">
+            </div>
+            <div class="form-group bmd-form-group">
+                <label for="price" class="bmd-label-floating">Price ($)</label>
+                <input type="number" class="form-control" id="price">
+            </div>
+            <div class="form-group bmd-form-group">
+                <label for="photo" class="bmd-label-floating">Photo URL</label>
+                <input type="text" class="form-control" id="photo">
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">CANCEL</button>
+            <button id="submitAddListing" type="button" class="btn btn-primary" data-dismiss="modal">CREATE</button>
+        </div>
+    </div>
+    </div>
+</div>
+
+
+    <script src="scripts/jquery.min.js"></script>
+    <script src="scripts/popper.js"></script>
+    <script src="scripts/bootstrap-material-design.js"></script>
+    <script>
+        $("body").bootstrapMaterialDesign();
+    </script>
+    <script src="/__/firebase/7.18.0/firebase-app.js"></script>
+    <script src="/__/firebase/7.18.0/firebase-analytics.js"></script>
+    <script src="/__/firebase/7.18.0/firebase-auth.js"></script>
+    <script src="/__/firebase/7.18.0/firebase-firestore.js"></script>
+    <script src="/__/firebase/init.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>

@@ -18,21 +18,22 @@
       <button id="profileButton" type="button" style="color:white" class="btn navButton">Profile</button>
     </div>
   </nav>
-  <div id="profilePage" class="container page-container">
-
-    <div id="profile" class="col-xs-1" align="center">
-      <h4 id="firstName">First Name</h4>
-      <h4 id="lastName">Last Name</h4>
-      <button id="editName" type="button" data-toggle="modal" data-target="#editNameModal" class="btn editButton">Edit Name</button>
+  <div id="editListingPage" class="container page-container">
+    <div class="card mx-auto" style="max-width: 1024px;">
+      <img id="cardImageURL" class="card-img-top img-fluid" style="max-width:1024px;max-height:512px" src="src">
+      <div class="card-body">
+        <h4 id="cardCaption" class="cardText"></h4>
+      </div>
     </div>
-
-
+    <div style="display:flex;justify-content: center;">
+      <button id="editListing" type="button" data-toggle="modal" data-target="#editListingModal" class="btn editButton">Edit Listing</button>
+      <button id="deleteListing" type="button" class="btn editButton">Delete Listing</button>
+    </div>
 
   </div>
 
 <!-- Modal -->
-<div class="modal fade" id="editNameModal" tabindex="-1" role="dialog" aria-labelledby="Edit Name"
-aria-hidden="true">
+<div class="modal fade" id="editListingModal" tabindex="-1" role="dialog" aria-labelledby="Edit Listing" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
         <div class="modal-header">
@@ -40,17 +41,21 @@ aria-hidden="true">
         </div>
         <div class="modal-body">
           <div class="form-group bmd-form-group">
-            <label for="fName" class="bmd-label-floating">First Name</label>
-            <input type="text" class="form-control" id="fName">
+            <label for="name" class="bmd-label-floating">Name</label>
+            <input type="text" class="form-control" id="name">
           </div>
           <div class="form-group bmd-form-group">
-            <label for="lName" class="bmd-label-floating">Last Name</label>
-            <input type="text" class="form-control" id="lName">
+            <label for="price" class="bmd-label-floating">Price ($)</label>
+            <input type="number" class="form-control" id="price">
+          </div>
+          <div class="form-group bmd-form-group">
+            <label for="photo" class="bmd-label-floating">Photo URL</label>
+            <input type="text" class="form-control" id="photo">
           </div>
         </div>
         <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">CANCEL</button>
-            <button id="submitEditName" type="button" class="btn btn-primary" data-dismiss="modal">SAVE</button>
+            <button id="submitEditListing" type="button" class="btn btn-primary" data-dismiss="modal">SAVE</button>
         </div>
     </div>
     </div>
